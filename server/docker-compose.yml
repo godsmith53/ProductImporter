@@ -29,7 +29,7 @@ services:
 
   web:
     build: .
-    # In dev we keep --reload for hot reload and bind local port 8000
+    # Dev mode: reload & local port mapping
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     volumes:
       - .:/app
